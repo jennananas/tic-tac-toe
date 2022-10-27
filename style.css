@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@600;700&display=swap');
+
+body {
+    margin : 0;
+    padding : 0;
+    font-size: 62.5%;
+    font-family: 'Dosis', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap : 2rem;
+    margin-top : 5rem;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    border-radius: 25px;
+    background-color: #5d737e50;
+
+}
+
+.cell {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding : 0;
+    margin : 0;
+    border : 1px solid #5d737e90;
+    font-size: 4rem;
+}
+.cell:nth-child(-n+3){
+    border-top: none;
+}
+.cell:nth-child(3n-2){
+    border-left: none;
+}
+.cell:nth-child(3n+3){
+    border-right: none;
+} 
+.cell:nth-child(n+7){
+    border-bottom: none;
+}
+
+.gameText {
+    display: flex;
+    flex-direction: column;
+    margin : 0;
+    padding : 0;
+    gap : 1.5rem;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#restart {
+    font-family: inherit;
+    font-size: 2rem;
+    padding : 0.5rem 2rem;
+    position:relative;
+    top : 3rem;
+}
